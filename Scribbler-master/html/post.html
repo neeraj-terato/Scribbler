@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post List</title>
+
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/post.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Marck+Script|Satisfy' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nanum+Pen+Script&family=Rock+Salt&family=Sacramento&display=swap" rel="stylesheet"></head>
+<body>
+
+<!--Modals-->
+<div id="myModal" class="modal">
+
+  <!-- Get started modal content -->
+    <div class="modal-content" id="getStartedModal">
+      <span class="close" style="font-size: 40px;" id="modelCloseBtn" onclick="closeModelfun()">&times;</span>
+       <div style="text-align: center;"><h1>Get Started</h1></div>
+       <hr>
+       <form>
+         <span>Full Name</span><br>
+         <input type="text" id="fullName" required placeholder="Enter Full Name"><br>
+         <span>Username</span><br>
+         <input type="text" id="UserName" required placeholder="Enter Username"><br>
+         <span>Password</span><br>
+         <input type="password" id="password" required placeholder="Enter Password"><br>
+         <span>Confirm Password</span><br>
+         <input type="password" id="confirmpassword" required placeholder="Confirm Password"><br>
+         <button type="submit" id="submit">Sign Up</button>
+       </form>
+    </div>
+
+  <!--Welcome back modal content-->
+    <div class="modal-content" id="welcomeBackModal">
+        <span class="close" style="font-size: 40px;" id="modelCloseBtn" onclick="closeModelfun()">&times;</span>
+        <div style="text-align: center;"><h1>Welcome Back!</h1></div>
+        <hr>
+        <form>
+           <span>Username</span><br>
+           <input type="text" id="UserName" required placeholder="Enter Username"><br>
+           <span>Password</span><br>
+           <input type="password" id="password" required placeholder="Enter Password"><br>
+           <button type="submit" id="submit">Sign Ip</button><br>
+           <div style="text-align: center; margin-top: 20px;"><h3>Not a member? <a href="#" style="text-decoration: none;" onclick="signUpfun()">Sign Up</a></h3></div>
+        </form>
+    </div>
+</div>   
+
+<!-- LOGO and header -->
+<div class="header">
+    <button id="signIn" class="sbtn" onclick="signInfun()">Sign In</button>
+    <button id="signUp" class="sbtn" onclick="signUpfun()">Sign Up</button>
+    <a  class="logo-title">ScriBBler</a>
+    <p class="logo-middleText">Explore, Imagine, Create</p>
+</div>
+
+
+
+<div class="postContainer">
+    <h1 id="postHeading">Everything you should know about ‘module’ & ‘require’ in Node.js</h1>
+   
+    <!-- Hidden title for edit -->
+    <textarea type="text" id="postHeading_edit"></textarea>
+    <div class="postName">
+        <p id="name" style="font-family: 'Nanum Pen Script', cursive;">JIMI</p>
+        <button id="edit" onclick="edit_post()">Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+       
+        <!-- hidden button for save -->
+        <button id="save" onclick="save_post()">Save <i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+    </div>
+    <p id="postBody">
+
+        Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+        named xyz.
+    </p>
+    <!-- hidden body for edit -->
+    <textarea id="postBody_edit"></textarea>
+    <button id="like" onclick="like_post()"><i class="fa fa-thumbs-up" aria-hidden="true"></i>Like</button>
+    <p id="likeCounter">Be first one to like this!</p>
+    <textarea id="commentData" placeholder="leave a comment..."></textarea><br>
+    <button id="commentBtn" onclick="post_comment()">Comment</button>
+    <h3 id="comment">ALL Comments</h3>
+    <div id="allComments">
+
+    </div>
+</div>
+
+
+
+<script src="../js/post.js"></script>
+</body>
+</html>

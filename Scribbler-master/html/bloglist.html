@@ -1,0 +1,189 @@
+<html>
+    <head>
+        <title>Blogs</title>
+        <link rel="stylesheet" href="../css/bloglist.css">
+        <link rel="stylesheet" href="../css/header.css">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script" rel="stylesheet">
+        <link rel="stylesheet" href="C:\Users\Ankit\Desktop\scribbler\font-awesome-4.7.0\css\font-awesome.css">
+        <link rel="stylesheet" href="C:\Users\Ankit\Desktop\scribbler\font-awesome-4.7.0\css\font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Marck+Script|Satisfy' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+   
+    </head>
+    <body>
+        <!-- for logo and sign in and sign up button -->
+            <div class="header">
+              <button id="btnSignInModal" class="sbtn" onclick="signInfun()">Sign In</button>
+              <button id="btnSignUpModal" class="sbtn" onclick="signUpfun()">Sign Up</button>
+              <a  class="logo-title">ScriBBler</a>
+              <p class="logo-middleText">Explore, Imagine, Create</p>
+             </div>  
+        
+
+        <!-- Modals-->
+        <div id="myModal" class="modal">
+
+           <!-- Modal content -->
+            
+           <!-- Get started modal content -->
+              <div class="modal-content" id="getStartedModal">
+                  <span class="close" style="font-size: 40px;" id="modelCloseBtn" onclick="closeModelfun()">&times;</span>
+                  <div style="text-align: center;"><h1>Get Started</h1></div>
+                  <hr>
+                  <form>
+                    <span>Full Name</span><br>
+                    <input type="text" id="fullName" required placeholder="Enter Full Name"><br>
+                    <span>Username</span><br>
+                    <input type="text" id="UserName" required placeholder="Enter Username"><br>
+                    <span>Password</span><br>
+                    <input type="password" id="password" required placeholder="Enter Password"><br>
+                    <span>Confirm Password</span><br>
+                    <input type="password" id="confirmpassword" required placeholder="Confirm Password"><br>
+                    <button type="submit" id="submit">Sign Up</button>
+                  </form>
+               </div>
+  
+          <!--Welcome back modal content-->
+               <div class="modal-content" id="welcomeBackModal">
+                  <span class="close" style="font-size: 40px;" id="modelCloseBtn" onclick="closeModelfun()">&times;</span>
+                  <div style="text-align: center;"><h1>Welcome Back!</h1></div>
+                  <hr>
+                  <form>
+                    <span>Username</span><br>
+                    <input type="text" id="UserName" required placeholder="Enter Username"><br>
+                    <span>Password</span><br>
+                    <input type="password" id="password" required placeholder="Enter Password"><br>
+                    <button type="submit" id="submit">Sign Ip</button><br>
+                    <div style="text-align: center; margin-top: 20px;"><h3>Not a member? <a href="#" style="text-decoration: none;" onclick="signUpfun()">Sign Up</a></h3></div>
+                  </form>
+               </div>
+
+          <!--Delete Post Modal-->      
+                <div class="modal-content" id="delPostModel">
+                     <p>Are you Sure you want to delete this post</p>
+                     <button id="deletePostBtnYes" class="deletePostBtnYes">Yes</button>
+                     <button id="deletePostBtnNo" class="deletePostBtnNo" onclick="deletePostBtnNo()">No</button>
+                </div>
+
+        </div>
+
+        <!-- Posts-->
+        <div id="allBlogsContainer">
+
+           <!-- Post 1-->
+            <div class="blogDiv">
+                 <p class="nameOnPost">Colby Fayock</p>
+              
+             <!-- Post content--> 
+                 <div class="blogContent">
+                    <div class="blogTitle">
+                        <span>
+                            <button id="postDelBtn" onclick="trashfun()"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        </span>
+                        <h2 id="postHeading">Everything you should know about ‘module’ & ‘require’ in Node.js</h2>
+                    </div>
+                    <p id="postDescription">Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                    named xyz.</p>
+                    <span>
+                         <a href="post.html"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                    </span>
+                </div>
+            </div>
+            <!-- post 1 ends here -->
+    
+            <!-- post 2 starts here -->
+            <div class="blogDiv">
+                <p class="nameOnPost">Colby Fayock</p>
+             
+              <!-- Post content--> 
+                <div class="blogContent">
+                   <div class="blogTitle">
+                       <span>
+                           <button id="postDelBtn" onclick="trashfun()"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                       </span>
+                       <h2 id="postHeading">Everything you should know about ‘module’ & ‘require’ in Node.js</h2>
+                   </div>
+                   <p id="postDescription">Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                   named xyz.</p>
+                   <span>
+                        <a href="post.html"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                   </span>
+               </div>
+           </div>
+            <!-- post 2 ends here -->
+    
+            <!-- post 3 starts here -->
+            <div class="blogDiv">
+                <p class="nameOnPost">Colby Fayock</p>
+             
+               <!-- Post content--> 
+                <div class="blogContent">
+                   <div class="blogTitle">
+                       <span>
+                           <button id="postDelBtn" onclick="trashfun()"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                       </span>
+                       <h2 id="postHeading">Everything you should know about ‘module’ & ‘require’ in Node.js</h2>
+                   </div>
+                   <p id="postDescription">Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                   named xyz.</p>
+                   <span>
+                        <a href="post.html"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                   </span>
+               </div>
+           </div>
+            <!-- post 3 ends here -->
+    
+            <!-- post 4 starts here -->
+            <div class="blogDiv">
+                <p class="nameOnPost">Colby Fayock</p>
+             
+               <!-- Post content--> 
+                <div class="blogContent">
+                   <div class="blogTitle">
+                       <span>
+                           <button id="postDelBtn" onclick="trashfun()"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                       </span>
+                       <h2 id="postHeading">Everything you should know about ‘module’ & ‘require’ in Node.js</h2>
+                   </div>
+                   <p id="postDescription">Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                   named xyz.</p>
+                   <span>
+                        <a href="post.html"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                   </span>
+               </div>
+           </div>
+            <!-- post 4 ends here -->
+    
+            <!-- post 5 starts here -->
+            <div class="blogDiv">
+                <p class="nameOnPost">Colby Fayock</p>
+             
+               <!-- Post content--> 
+                <div class="blogContent">
+                   <div class="blogTitle">
+                       <span>
+                           <button id="postDelBtn" onclick="trashfun()"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                       </span>
+                       <h2 id="postHeading">Everything you should know about ‘module’ & ‘require’ in Node.js</h2>
+                   </div>
+                   <p id="postDescription">Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                   named xyz.</p>
+                   <span>
+                        <a href="post.html"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                   </span>
+               </div>
+           </div>
+            <!-- post 5 ends here -->
+    
+            <!-- TODO: Write code for delete post modal here -->
+    
+        </div>
+
+           
+           
+    </body>
+    <script src="../js/bloglist.js"></script>
+</html>

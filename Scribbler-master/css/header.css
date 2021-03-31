@@ -1,0 +1,23 @@
+.logo-title{
+  font-family: 'Satisfy', cursive;
+  font-size: 35px;
+  color: #112fb4;
+  text-decoration: none;
+  margin-left: 10px;
+
+}
+
+.logo-middleText{
+  color: black;
+  font-family: 'Marck Script', cursive;
+  margin-left: 10px;
+}
+
+.sbtn{
+  float: right;
+  background-color: blue;
+  color: white;
+  margin: 0px 10px 10px 10px;
+  padding: 8px 10px 10px 8px;
+  border: white;
+}

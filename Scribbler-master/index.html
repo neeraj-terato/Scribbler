@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script" rel="stylesheet">
+    <link rel="stylesheet" href="C:\Users\Ankit\Desktop\scribbler\font-awesome-4.7.0\css\font-awesome.css">
+    <link rel="stylesheet" href="C:\Users\Ankit\Desktop\scribbler\font-awesome-4.7.0\css\font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Marck+Script|Satisfy' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-image: url('images/background.jpg');">
+    
+   <!-- for logo and sign in and sign up button -->
+    <div class="header">
+        <button id="btnSignInModal" class="sbtn" onclick="signInfun()">Sign In</button>
+        <button id="btnSignUpModal" class="sbtn" onclick="signUpfun()">Sign Up</button>
+        <a  class="logo-title">ScriBBler</a>
+        <p class="logo-middleText">Explore, Imagine, Create</p>
+    </div> 
+
+    
+    <div id="postsBtnDiv">
+        <button id="allPostsBtn" class="pbtn" onclick="location.href='html/bloglist.html'">All Posts</button>
+        <button id="createPostsBtn" class="pbtn" onclick="postfun()">Create Posts</button>
+    </div>
+
+
+    <!-- modals-->
+    <div id="myModal" class="modal">
+
+        <!-- Get started modal content -->
+        <div class="modal-content" id="getStartedModal">
+          <span class="close" style="font-size: 40px;" id="modelCloseBtn" onclick="closeModelfun()">&times;</span>
+           <div style="text-align: center;"><h1>Get Started</h1></div>
+           <hr>
+           <form>
+             <span>Full Name</span><br>
+             <input type="text" id="fullName" required placeholder="Enter Full Name"><br>
+             <span>Username</span><br>
+             <input type="text" id="UserName" required placeholder="Enter Username"><br>
+             <span>Password</span><br>
+             <input type="password" id="password" required placeholder="Enter Password"><br>
+             <span>Confirm Password</span><br>
+             <input type="password" id="confirmpassword" required placeholder="Confirm Password"><br>
+             <button type="submit" id="submit">Sign Up</button>
+           </form>
+        </div>
+
+        <!--Welcome back modal content-->
+        <div class="modal-content" id="welcomeBackModal">
+            <span class="close" style="font-size: 40px;" id="modelCloseBtn" onclick="closeModelfun()">&times;</span>
+            <div style="text-align: center;"><h1>Welcome Back!</h1></div>
+            <hr>
+            <form>
+               <span>Username</span><br>
+               <input type="text" id="UserName" required placeholder="Enter Username"><br>
+               <span>Password</span><br>
+               <input type="password" id="password" required placeholder="Enter Password"><br>
+               <button type="submit" id="submit">Sign Ip</button><br>
+               <div style="text-align: center; margin-top: 20px;"><h3>Not a member? <a href="#" style="text-decoration: none;" onclick="signUpfun()">Sign Up</a></h3></div>
+            </form>
+        </div>
+
+
+        <!--Pen your post modal content-->
+        <div class="modal-content" id="penYourPostModal">
+            <span class="close" style="font-size: 40px;" id="modelCloseBtn" onclick="closeModelfun()">&times;</span>
+            <div style="text-align: center;"><h1>Pen Your Post</h1></div>
+            <hr>
+            <form id="postForm"> 
+               <span>Title</span><br>
+               <input style="width: 40%;" type="text" id="title"><br>
+               <span>Description</span><br>
+               <textarea style="height:300px;width:100%;background-color:rgb(242, 242, 242) ;" id="description" required ></textarea><br>
+               <div style="text-align: center; margin-top: 20px;"><button style="width:70px;">Create</button></div>
+            </form>
+        </div>
+
+
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

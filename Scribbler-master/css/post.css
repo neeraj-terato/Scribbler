@@ -1,0 +1,200 @@
+
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 10px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+  
+ .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+  }
+
+.sbtn{
+    float: right;
+    background-color: blue;
+    color: white;
+    margin: 0px 10px 10px 10px;
+    padding: 8px 10px 10px 8px;
+    border: white;
+  }
+
+  
+#getStartedModal{
+    display: none;
+}
+  
+#welcomeBackModal{
+    display: none;
+    margin-top: 100px;
+    width: 25%;
+}
+   
+.modal-content h1{
+    font-family: 'Dancing Script', cursive;
+    align-items: center;
+      
+}
+    
+.modal-content input{
+    margin-bottom: 20px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: rgb(242, 242, 242);
+}
+   
+.modal-content form span{
+    font-family: 'Architects Daughter', cursive ;
+    font-size: large;
+}
+    
+.modal-content button{
+    width: 100%;
+    background-color: rgb(96, 186, 89);
+    color: white;
+    height: 40px;
+    text-align: center;
+    border: none;
+    margin-top: 10px;
+  
+}
+    
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+      
+.close:hover,  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+.postContainer{
+    margin: 0 5%;
+}
+
+#postHeading{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Handlee', cursive;
+}
+#postHeading_edit{
+    margin: 0px auto 0px auto;
+    display:none;
+    height: 34px;
+    width: auto;
+    height: auto;
+    font-size: 30px;
+    border: 2px solid lightpink;
+    font-family: 'Handlee', cursive;
+}
+
+.postName{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.postName #name{
+    
+    font-size: 30px;
+    font-family: 'Aclonica', sans-serif;
+}
+
+
+.postName #edit{
+    height: 40px;
+    font-size: 15px;
+    padding: 5px 20px;
+    background-color: #ff3385;
+    color: white;
+    border: none;
+    box-shadow: 2px 5px 10px #ff3385;
+
+}
+
+.postName #save{
+    display: none;
+    height: 40px;
+    font-size: 15px;
+    padding: 5px 20px;
+    background-color: #ff3385;
+    color: white;
+    border: none;
+    box-shadow: 2px 5px 10px #ff3385;
+
+}
+.postContainer #like{
+    margin-top: 10px;
+    height: 40px;
+    font-size: 20px;
+    padding: 5px 40px;
+    background-color: #ff3385;
+    color: white;
+    border: none;
+    box-shadow: 2px 5px 10px #ff3385;
+    border-radius: 5px;
+}
+#commentData{
+    height: 100px;
+    width: 60%;
+}
+
+#commentBtn{
+    margin-top: 10px;
+    height: 40px;
+    font-size: 20px;
+    padding: 5px 40px;
+    background-color: #ff3385;
+    color: white;
+    border: none;
+    box-shadow: 2px 5px 10px #ff3385;
+}
+
+#allComments{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding: 20px;
+}
+ #allComments .commentContent{
+    background-color: white;
+    width: 100%;
+    height:40px;
+    align-content: center;
+    margin-top: 2px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#postBody_edit{
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+    border: 2px solid lightblue;
+    font-family: 'Akaya Kanadaka', cursive;
+    font-size: 20px;
+}
+#postBody{
+   font-family: 'Akaya Kanadaka', cursive;
+    font-size: 20px;
+}
+
